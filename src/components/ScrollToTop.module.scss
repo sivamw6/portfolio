@@ -1,0 +1,41 @@
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.button-container {
+  position: fixed;
+  bottom: 5%;
+  right: 5%;
+  z-index: 9999;
+}
+
+.button {
+  height: 60px;
+  width: 60px;
+  color: #333;
+  cursor: pointer;
+  transition: transform 0.2s ease-out;
+  transform-origin: center bottom;
+  
+  &:hover{
+    animation: none;
+    color: #a0a0a0;
+    animation: bounce 0.6s infinite;
+  }
+  
+}
+
+.text {
+  writing-mode: vertical-lr;
+  text-align: center;
+  margin: auto;
+  padding-bottom: 17px;
+}

@@ -1,0 +1,5 @@
+@mixin hover-effect {
+  opacity: 1;
+  transition: opacity 0.8s ease-in-out;
+  padding-top: 200px;
+}

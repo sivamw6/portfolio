@@ -1,0 +1,60 @@
+@use '../scss/abstracts/' as *;
+
+.nav {
+  font-family: $fontFamilyBase;
+  background-color: #ffffff36;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  margin-left: 5%;
+  margin-top: 5%;
+  z-index: 1000;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
+  backdrop-filter: blur(12px);
+
+  .ul{
+    position: absolute;
+    bottom: 20px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 1.5rem;
+    
+    .a {
+      color: $secondaryColor;
+
+      &:hover {
+        color: $primaryColor;
+      }
+    }
+  }
+
+}
+
+.link {
+  color: #000000; // Change this to your preferred text color
+  background-color: #c2c2c200;
+  text-decoration: none;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  transition: color 0.3s ease;
+  border: none;
+
+  &:hover {
+    text-decoration: underline;
+    color: $secondaryColor;
+
+  }
+}
+
+.activeLink {
+  background-color: $black; 
+}

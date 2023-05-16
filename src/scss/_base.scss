@@ -1,0 +1,23 @@
+@use './abstracts/' as *;
+
+body {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+/* Rest of your app styles */
+
+
+.App {
+  text-align: center;
+}
+
+
+.link {
+  text-decoration: none;
+  display: inline;
+  padding: 20px 20px;
+  font-weight: 700;
+  font-size: large;
+  cursor: pointer;
+}

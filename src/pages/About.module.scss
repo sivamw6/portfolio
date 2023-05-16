@@ -1,0 +1,44 @@
+@use '../scss/abstracts/' as *;
+
+.about-page {
+  margin-left: 15%;
+  text-align: right;
+  height: 100vh;
+  background-color: $white;
+
+  font-family: $fontFamilyBase;
+
+  .h1{
+    text-align: left;
+    padding: 40px;
+  }
+}
+
+.content {
+  width: 25rem;
+  margin-left: 20%;
+  margin-bottom: 10%;
+  padding: 20px;
+  border-radius: 10%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
+
+  .p {
+    text-align: left;
+  
+  }
+}
+
+.content2 {
+  width: 25rem;
+  padding: 20px;
+
+  margin-left: 40%;
+  border-radius: 10%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
+
+
+  .p{
+    text-align: left;
+
+  }
+}
