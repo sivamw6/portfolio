@@ -9,33 +9,31 @@ import styles from './Sidebar.module.scss';
 const Sidebar = ({home, about, projects, contact}) => {
   const location = useLocation();
   // Function to scroll to the given section
+
   const scrollToSection = (page) => {
-    const elementRef = page === "/home"
-      ? home
-      : page === "/about"
-      ? about
-      : page === "/projects"
-      ? projects
-      : page === "/contact"
-      ? contact
+    const elementRef = 
+        page === "/home" ? home
+      : page === "/about" ? about
+      : page === "/projects" ? projects
+      : page === "/contact" ? contact
       : null;
+
     if (elementRef && elementRef.current) {
       elementRef.current.scrollIntoView({ behavior: "smooth" });
     }
   };
-  
 
   // Add event listener to window to update URL when scrolling
   useEffect(() => {
     const handleScroll = debounce(() => {
       if (window.scrollY < about.current.offsetTop) {
-        window.history.replaceState(null, null, '/home');
+        window.history.replaceState(null, null, '/portfolio/home');
       } else if (window.scrollY < projects.current.offsetTop) {
-        window.history.replaceState(null, null, '/about');
+        window.history.replaceState(null, null, '/portfolio/about');
       } else if (window.scrollY < contact.current.offsetTop) {
-        window.history.replaceState(null, null, '/projects');
+        window.history.replaceState(null, null, '/portfolio/projects');
       } else {
-        window.history.replaceState(null, null, '/contact');
+        window.history.replaceState(null, null, '/portfolio/contact');
       }
     }, 100);
 
@@ -46,6 +44,7 @@ const Sidebar = ({home, about, projects, contact}) => {
 
   // Scroll to correct section when URL changes
   useEffect(() => {
+    console.log(location.pathname)
     if (location.pathname === '/home') {
       scrollToSection(home);
     } else if (location.pathname === '/about') {
